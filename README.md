@@ -1,4 +1,4 @@
-# CSS - Exercice complet 03 - Ara #
+# CSS - Exercice complet 04 - Coucou Hibou #
 
 ![Coucou-hibou](http://cepegra-labs.be/webdesign/2017/cours/css/full/04-coucouhibou/coucouhibou-git.jpg)
 
