@@ -1,4 +1,4 @@
-body, html, header
+body, html, .homepage header
 {
   height: 100%;
   width: 100%;
@@ -11,12 +11,12 @@ main
   margin: 0 auto;
 }
 /*fonts*/
-h1, h3, .main_nav a, header strong, #submit
+h1, h3, .main_nav a, .homepage header strong, #submit
 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
 }
-h2, header em
+h2, .homepage header em
 {
   font-family: 'Pacifico', cursive;
 }
@@ -46,7 +46,7 @@ a
   text-decoration: none;
 }
 /*header*/
-header
+.homepage header
 {
   position: fixed;
   top: 0;
@@ -54,11 +54,11 @@ header
   z-index: -10;
   color: white;
 }
-header *
+.homepage header *
 {
   color: white;
 }
-header video
+.homepage header video
 {
   position: absolute;
   left: 50%;
@@ -67,7 +67,7 @@ header video
   min-width: 100%;
   min-height: 100%;
 }
-header p
+.homepage header p
 {
   position: absolute;
   left: 50%;
@@ -77,17 +77,26 @@ header p
   width: 80%;
   line-height: normal;
 }
-header em
+.homepage header p::after
+{
+  content: '';
+  display: block;
+  background: url("../img/sprite.png");
+  width: 45px;
+  height: 45px;
+  margin: 120px auto;
+}
+.homepage header em
 {
   font-size: 35px;
   margin-bottom: 30px;
 }
-header strong
+.homepage header strong
 {
   font-size: 86px;
 
 }
-header nav
+.homepage header nav
 {
   position: absolute;
   top: 40px;
