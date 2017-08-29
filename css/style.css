@@ -77,14 +77,14 @@ a
   width: 80%;
   line-height: normal;
 }
-.homepage header p::after
+.homepage header p a
 {
-  content: '';
   display: block;
   background: url("../img/sprite.png");
   width: 45px;
   height: 45px;
   margin: 120px auto;
+  border-radius: 22.5px;
 }
 .homepage header em
 {
@@ -112,7 +112,7 @@ a
 /*nav*/
 .main_nav
 {
-  margin-top: 100%;
+  margin-top: 100vh;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding-top: 20px;
