@@ -382,6 +382,9 @@ input
 .strokelink a:hover
 {
   text-decoration: underline;
+}
+.new .strokelink a:hover
+{
   color: #502628;
 }
 .orangelink:hover, li a:hover
