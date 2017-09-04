@@ -384,7 +384,7 @@ main {
 
   color:                 #5f3436;
 
-  z-index:               1000;
+  z-index:               900;
 }
 
 .texte {
@@ -791,8 +791,8 @@ a[class="fa fa-camera"] {
 .coordonnees a {
 	color:                 #502628;
 }
-.coordonnees p {
-	margin-top:            0;
+.coordonnees address {
+	font-style:            normal;
 }
 .coordonnees div:first-child a {
 	font-style:            italic;
@@ -869,6 +869,9 @@ a[class="fa fa-camera"] {
 	font-style:            normal;
 
 	cursor:                pointer;
+}
+.contact fieldset input[type="submit"]:hover {
+  opacity: 0.9;
 }
 fieldset h2::after {
 	content:               '';
