@@ -1,0 +1,909 @@
+/* classement des propriétés :
+tout ce qui concerne la box
+
+les border
+
+le background
+
+le texte
+
+autre.
+
+Faire une indentation quand lien de parenté entre les sélecteurs */
+
+*:before, *:after {
+  box-sizing:         inherit;
+}
+
+html, body, header {
+  height:             100%;
+  box-sizing:         border-box;
+}
+
+video::-webkit-media-controls {
+  display:            none;
+}
+
+a {
+  text-decoration:    none;
+}
+
+header, header a, footer a {
+  color:              #fff;
+}
+
+li {
+  list-style:         none;
+}
+
+body {
+  padding:             1px;
+
+  font-family:         "Times New Roman", Times, serif;
+  font-size:           17px;
+  line-height:         27px;
+  color:               #502628;
+}
+
+h3, h1, li {
+  font-family:         'Oswald', sans-serif;
+  text-transform:      uppercase;
+  font-weight:         normal;
+}
+
+h3 {
+  font-size:           18px;
+  line-height:         25px;
+}
+
+h2 {
+  margin-top:           0;
+
+  font-family:         "Pacifico", cursive;
+  color:               #de6e1d;
+  font-size:           40px;
+  line-height:         46px;
+  font-weight:         normal;
+}
+
+h1 {
+  font-size:           57px;
+  line-height:         85px;
+  letter-spacing:      1px;
+  text-align:          center;
+}
+
+.wrap {
+  width:                1140px;
+
+  margin:               0 auto;
+  padding-bottom:       200px;
+}
+
+/*home page header*/
+.homepage header {
+  position:             fixed;
+  width:                100%;
+  top:                  0;
+  left:                 0;
+
+  z-index:              0;
+}
+
+	.homepage header .reseaux a {
+  	margin-right:       10px;
+
+  	font-size:          36px;
+	}
+
+	.homepage header video {
+  	min-width:           100%;
+  	min-height:          100%;
+  	position:            absolute;
+  	top:                 50%;
+  	left:                50%;
+  	transform:           translate(-50%,-50%);
+
+    z-index: 10;
+	}
+
+	.homepage header > div {
+  	max-width:           1180px;
+  	height:              100%;
+
+  	margin:              0 auto;
+	}
+
+	.homepage header .reseaux {
+  	position:            absolute;
+  	top:                 40px;
+  	right:               30px;
+	}
+
+.reseaux, .opening {
+  z-index:               20;
+}
+
+.opening {
+  position:              absolute;
+  top:                   50%;
+  left:                  50%;
+  transform:             translate(-50%, -50%);
+  width:                 100%;
+  overflow:              visible;
+}
+
+	.opening * {
+  	display:             block;
+
+  	text-align:          center;
+	}
+
+	.opening em {
+  	font-family:         'Pacifico', 'cursive';
+  	font-size:           35px;
+  	line-height:         49px;
+	}
+
+	.opening strong {
+		margin-bottom:       20px;
+
+  	font-family:         'Oswald', sans-serif;
+  	font-size:           86px;
+  	line-height:         126px;
+  	text-transform:      uppercase;
+	}
+
+	.opening a, nav > a {
+  	display:             block;
+		position:            relative;
+  	width:               42px;
+  	height:              42px;
+
+		border:              2px solid #fff;
+
+  	border-radius:       25px;
+  	margin:              0 auto;
+
+    /*z-index:             1000;*/
+	}
+
+.arrow {
+	position:              absolute;
+  top:                   50%;
+  left:                  50%;
+  transform:             translate(-50%, -50%);
+  width:                 0;
+  height:                0;
+
+  border-style:          solid;
+  border-width:          8px 5px 0 5px;
+  border-color:          #fff transparent transparent transparent;
+}
+
+/*nav*/
+nav {
+	position:              fixed;
+  top:                   0;
+  width:                 100%;
+  height:                180px;
+
+	padding-bottom:        10px;
+
+	background:            url(../img/sep-header.png) rgba(255,255,255,.9) repeat-x bottom;
+
+  text-align:            center;
+
+  z-index:               1000;
+}
+
+.homepage nav {
+  position:              relative;
+
+  margin-top:            100vh;
+}
+
+	nav > div {
+  	width:               1052px;
+
+  	margin:              0 auto;
+	}
+
+	nav div > ul {
+		height:              100%;
+  	position:            relative;
+  	width:               380px;
+
+  	margin:              0 40px 0;
+		padding:             0;
+
+  	text-align:          center;
+	}
+
+	nav * {
+  	display:             inline-block;
+	}
+
+#sousmenu {
+  display:               none;
+}
+
+	#sousmenu::after {
+  	content:             "";
+
+		position:            absolute;
+  	top:                 -8px;
+  	left:                50%;
+  	transform:           translateX(-50%);
+
+  	width:               0;
+  	height:              0;
+
+  	border-style:        solid;
+  	border-width:        0 8px 8px 8px;
+  	border-color:        transparent transparent #fff transparent;
+
+  	z-index:             100;
+	}
+
+	#sousmenu::before {
+  	content:             "";
+
+		position:            absolute;
+  	top:                 -9px;
+  	left:                50%;
+  	transform:           translateX(-50%);
+  	width:               0;
+  	height:              0;
+
+  	border-style:        solid;
+  	border-width:        0 9px 9px 9px;
+  	border-color:        transparent transparent #502628 transparent;
+
+  	z-index:             10;
+	}
+
+	#sousmenu li {
+	  display:             block;
+
+	  padding:             20px 0;
+	}
+
+	#sousmenu li:first-child {
+	  border-bottom:       1px solid #502628;
+	}
+
+#carte {
+  position:              relative;
+}
+
+	#carte:hover #sousmenu, #sousmenu:hover {
+  	display:             block;
+  	position:            absolute;
+  	top:                 120px;
+  	left:                50%;
+  	transform:           translateX(-50%);
+  	width:               250px;
+
+  	border:              1px solid #502628;
+  	padding:             10px 20px;
+
+  	background: rgba(255, 255, 255, .9);
+
+  	text-align:          left;
+	}
+
+nav img {
+  width:                 132px;
+
+  margin-top:            20px;
+}
+
+nav a {
+  text-transform:        uppercase;
+  color:                 #502628;
+  font-size:             15px;
+  line-height:           18px;
+}
+
+nav li a:hover {
+  color:                 #de6e1d;
+}
+
+nav > a {
+  position:              absolute;
+  top:                   40px;
+  right:                 40px;
+
+  border-color:          #502628;
+
+  font-family:           'Oswald', sans-serif;
+  line-height:           42px;
+}
+
+	nav > a::after {
+  	content:              "";
+
+  	width:                0;
+  	height:               0;
+  	position:             absolute;
+  	top:                  80%;
+  	left:                 50%;
+  	transform:            translate(-50%, -50%);
+
+  	border-style:         solid;
+  	border-width:         5px 4px 0 4px;
+  	border-color:         #502628 transparent transparent transparent;
+	}
+
+.navleft > li, .navright > li {
+  width:                  190px;
+  height:                 125.2px;
+  position:               relative;
+
+  margin-top:             40px;
+}
+
+	.navleft > li::after, .navright > li::before {
+  	content:              '';
+
+  	width:                2px;
+  	height:               14px;
+  	position:             absolute;
+  	top:                  50%;
+  	transform:            translateY(-50%);
+
+  	background:           url(../img/sprite.png) no-repeat;
+  	background-position:  -50px 0;
+	}
+
+	.navleft > li::after {
+  	margin-left:          95px;
+	}
+
+	.navright > li::before {
+  	margin-left:         -95px;
+	}
+
+nav > div > ul > li > a {
+  display:               block;
+  position:              absolute;
+  top:                   50%;
+  left:                  50%;
+  transform:             translate(-50%, -50%);
+}
+
+.boissons a[href="boissons.html"], .contact a[href="contact.html"] {
+  color:                 #de6e1d;
+}
+
+/*Homepage main*/
+main {
+  position: relative;
+  background:            #fff;
+
+  color:                 #5f3436;
+
+  z-index:               1000;
+}
+
+.texte {
+  width:                 545px;
+}
+
+	.homepage main video {
+  	width:               550px;
+	}
+
+	.homepage section section {
+  	padding-top:         100px;
+	}
+
+	.homepage section div {
+  	display:             inline-block;
+  	vertical-align:      top;
+	}
+
+	.homepage section div.left {
+  	margin-right:        45px;
+	}
+
+	.homepage section div.right {
+  	margin-left:         45px;
+	}
+
+	.homepage section a img {
+  	max-height:          62px;
+  	max-width:           94px;
+  	vertical-align:      middle;
+
+  	margin:              25px 25px 0 0;
+	}
+
+		.homepage section a:hover img {
+  		opacity:          .75;
+		}
+
+/*homepage titre*/
+.homepage .titre {
+  padding:               80px 0 50px;
+
+  background:            url(../img/sep-header.png) repeat-x bottom;
+
+  text-align:            center;
+}
+
+	.homepage .titre p {
+  	font-style:          italic;
+  	font-size:           19px;
+  	line-height:         23px;
+	}
+
+/*footer*/
+footer {
+  position: relative;
+
+  z-index: 1000;
+}
+
+.bottom {
+  overflow:              hidden;
+
+  padding:               108px;
+
+  background:            #dc5f13;
+
+  color:                 #502628;
+}
+
+	.bottom > div {
+  	width:               1140px;
+
+  	margin:              0 auto;
+	}
+
+	.bottom img {
+  	width:               133px;
+  	display:             block;
+
+  	margin:              0 auto;
+	}
+
+	.bottom h2 {
+  	color:               #fff;
+	}
+
+	.bottom section {
+  	display:             inline-block;
+
+  	margin:              0;
+	}
+
+.news {
+  float:                 left;
+}
+
+.shop {
+  float:                 right;
+}
+
+	.shop div {
+  	display:             inline-block;
+  	width:               350px;
+	}
+
+	.shop a {
+  	color:               #502628;
+	}
+
+		.shop a:hover {
+  		text-decoration:   underline;
+		}
+
+	.shop ul {
+  	padding:             0;
+  	margin-top:          25px;
+	}
+
+		.shop li a {
+  		display:           block;
+  		width:             10px;
+  		height:            10px;
+
+  		border-radius:     50%;
+
+  		background:        #fff;
+		}
+
+/*footer contact*/
+.footer-contact {
+  max-width:             100%;
+
+  padding:               80px 0 40px;
+
+  background:            #502628;
+
+  color:                 #fff;
+}
+
+	.footer-contact .reseaux a {
+  	margin:              0 5px;
+
+  	font-size:           32px;
+	}
+
+	.footer-contact > div {
+  	width:               1202px;
+
+  	margin:              0 auto;
+	}
+
+		.footer-contact > div > div {
+  		display:           inline-block;
+  		width:             400px;
+  		height:            100px;
+  		vertical-align:    top;
+
+  		background:        url(../img/sep-footer.png) repeat-y right;
+
+  		text-align:        center;
+		}
+
+			.footer-contact > div > div:last-child {
+  			background:      none;
+			}
+
+			.footer-contact > div > div:first-child a {
+  			font-style:      italic;
+			}
+
+				a[href="mailto:info@coucouhibou.net"]:hover {
+  				text-decoration: underline;
+				}
+
+			.footer-contact > div > div strong {
+  			display:         block;
+
+  			margin-bottom:   25px;
+
+  			font-family:     'Oswald', sans-serif;
+  			font-size:       17px;
+  			line-height:     20px;
+  			text-transform:  uppercase;
+  			font-weight:     normal;
+			}
+
+input {
+	background:            none;
+
+	color:                 #fff;
+}
+
+input[id="ok"] {
+  border:                0;
+  margin-left:           10px;
+
+  font-family:           'Oswald', sans-serif;
+  font-size:             17px;
+  line-height:           20px;
+  text-transform:        uppercase;
+
+  cursor:                pointer;
+}
+
+	input[id="ok"]:hover, .reseaux a:hover {
+  	opacity:             .75;
+	}
+
+input[id="email"] {
+  width:                 150px;
+
+  border:                2px solid #fff;
+  padding:               12px 0;
+  margin:                0;
+  border-radius:         3px;
+
+  text-align:            center;
+  font-style:            italic;
+}
+
+	input[id="email"]::placeholder {
+  	font-family:         "Times New Roman", Times, serif;
+  	font-size:           17px;
+  	color:               #fff;
+  	font-style:          italic;
+
+  	opacity:             1;
+	}
+
+.locate {
+  max-width:             100%;
+
+  padding:               80px;
+
+  background:            url(../img/new-map-2x.jpg) #502628;
+  background-size:       cover;
+
+  color:                 #fff;
+  text-align:            center;
+}
+
+	.locate a {
+  	display:             inline-block;
+
+  	text-transform:      uppercase;
+  	font-family:         'Oswald', sans-serif;
+  	font-size:           17px;
+  	letter-spacing:      .5px;
+	}
+
+		.locate a:hover {
+  		color:             #de6e1d;
+		}
+
+	.locate img {
+  	position:            relative;
+  	top:                 8px;
+
+  	margin-right:        20px;
+	}
+
+/*header boissons*/
+.boissons header {
+  position:              relative;
+  max-width:             100%;
+  height:                50%;
+  margin-top:            189px;
+
+  background:            url(../img/cat_drink-1790x529.jpg) no-repeat center;
+  background-size:       cover;
+}
+
+	.boissons header img {
+  	position:            absolute;
+  	top:                 100%;
+  	left:                50%;
+  	transform:           translate(-50%, -50%);
+	}
+
+/*boisson contenu*/
+.boissons .wrap {
+  padding:               100px 0;
+}
+
+	.boissons .wrap section > div {
+  	width:               calc((100% - 120px) / 3);
+  	display:             inline-block;
+  	vertical-align:      top;
+
+  	text-align:          center;
+	}
+
+	.boissons .wrap div > div {
+  	position:            relative;
+  	width:               240px;
+  	height:              240px;
+
+  	margin:              0 auto;
+  	margin-bottom:       68px;
+	}
+
+	.boissons .wrap div {
+  	margin:              0 20px;
+	}
+
+	.boissons .wrap img {
+  	position:            absolute;
+  	top:                 50%;
+  	left:                50%;
+  	transform:           translate(-50%, -50%);
+  	width:               100%;
+
+  	border-radius:       50%;
+
+  	filter:              grayscale(1);
+  	z-index:             1;
+    transition:          .5s filter ease-in-out;
+	}
+
+a[class="fa fa-camera"] {
+  width:                 240px;
+  height:                240px;
+  position:              absolute;
+  top:                   50%;
+  left:                  50%;
+  transform:             translate(-50%, -50%);
+
+  color:                 rgba(255, 255, 255, 0);
+  text-align:            center;
+  line-height:           240px;
+  font-size:             36px;
+
+  z-index:               2;
+}
+
+	a[class="fa fa-camera"]:hover {
+  	color:               rgba(255, 255, 255, 1);
+	}
+
+	a[class="fa fa-camera"]:hover + img {
+  	filter:              grayscale(0);
+	}
+
+.boissons main p {
+  padding:               0 15px 50px;
+}
+
+.boissons h2 {
+  padding-bottom:        45px;
+  margin-bottom:         15px;
+
+  background:            url(../img/sep-product.png) no-repeat bottom;
+
+  font-size:             35px;
+}
+
+.boissons h1 {
+  margin-bottom:         120px;
+
+  color:                 #de6e1d;
+  font-size:             52px;
+}
+
+/*page contact*/
+.contact main {
+  margin-top:            180px;
+}
+.contact .wrap {
+	padding:               120px 0;
+}
+.contact .wrap section {
+	width:                 100%;
+}
+.contact h1 {
+  margin-bottom:         100px;
+
+	font-size:             45px;
+	line-height:           52px;
+}
+.contact h2 {
+	font-family:           Oswald, sans-serif;
+	color:                 #502628;
+	font-size:             20px;
+	line-height:           24px;
+	text-transform:        uppercase;
+	letter-spacing:        1px;
+}
+.coordonnees {
+	display:               inline-block;
+	width:                 43.3%;
+	height:                100%;
+}
+.coordonnees div + div {
+  width:                 100%;
+
+	border-top:            2px solid #502628;
+	padding:               40px 0 36px;
+}
+.coordonnees div:first-child {
+	padding-bottom:        36px;
+}
+.coordonnees a {
+	color:                 #502628;
+}
+.coordonnees p {
+	margin-top:            0;
+}
+.coordonnees div:first-child a {
+	font-style:            italic;
+}
+.contact .reseaux a {
+  margin:                0 8px;
+
+	font-size:             2em;
+}
+.coordonnees div * {
+	display:               inline-block;
+	vertical-align:        top;
+}
+.coordonnees h2 {
+	width:                 40%;
+}
+.contact form {
+	display:               inline-block;
+	width:                 calc(56.7% - 2px);
+	vertical-align:        top;
+
+	border-left:           2px solid #502628;
+
+	clear:                 both;
+}
+.contact fieldset {
+	border:                none;
+	float:                 right;
+	width:                 85%;
+  position:              relative;
+
+	margin:                0;
+	padding:               0;
+}
+.contact fieldset > * {
+	display:               block;
+}
+.contact fieldset input, textarea {
+	width:                 100%;
+  box-sizing:            border-box;
+
+	border:                1px solid #502628;
+	padding:               10px;
+	margin-bottom:         25px;
+
+	color:                 #502628;
+	font-family:           "Times New Roman", Times, serif;
+	font-size:             17px;
+	font-style:            italic;
+
+  resize:                none;
+}
+.contact fieldset textarea {
+	height:                150px;
+
+	margin-bottom:         100px;
+}
+.contact fieldset label {
+  padding-bottom:        5px;
+
+	font-style:            italic;
+}
+.contact fieldset a {
+	color:                 #de6e1d;
+}
+.contact fieldset input[type="submit"] {
+	background:            #502628;
+
+	color:                 #fff;
+	font-family:           'Oswald', sans-serif;
+	font-size:             20px;
+	line-height:           24px;
+	text-transform:        uppercase;
+	font-style:            normal;
+
+	cursor:                pointer;
+}
+fieldset h2::after {
+	content:               '';
+	background:            url(../img/bg-stamp.png);
+	display:               block;
+	width:                 263px;
+	height:                160px;
+	position:              absolute;
+	top:                   -120px;
+	right:                 0;
+}
+/*contact footer*/
+.contact .footer-contact > div {
+	padding-bottom:        50px;
+
+	background:            url(../img/sep-bottom.png) #502628 repeat-x bottom;
+}
+.contact .footer-contact {
+	padding-bottom:        0;
+}
+.contact .locate {
+  padding:               40px;
+
+	background:            #502628;
+}
+.contact .locate h2 {
+	margin:                0;
+
+  color:                 #fff;
+	font-size:             24px;
+}
+/*contact map*/
+#googlemaps {
+	width:                 100%;
+	height:                606px;
+
+	background-color:      grey;
+}
