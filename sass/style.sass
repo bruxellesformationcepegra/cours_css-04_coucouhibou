@@ -1,0 +1,513 @@
+@import normalize
+@import boxsizing
+@import clearfix
+
+/*  VARIABLES  */
+$color-text: #5f3436
+
+$color-link-hover: #dc5f13
+$color-link: #502628
+
+$color-headings: #de6e1d
+
+$color-bg: #fff
+$color-text-invert: $color-bg
+$color-bg-shop: $color-link-hover
+
+/* MIXINS */
+
+
+/* GENERIC */
+body,
+html
+  height: 100%
+
+body
+  font-family: 'Time New Roman', Times, serif
+  font-size: 17px
+  line-height: 27px
+  color: $color-text
+  background: $color-bg
+
+a
+  text-decoration: none
+  color: inherit
+
+/* GENERAL */
+h1, h3, #nav
+  font-family: 'Oswald', sans-serif
+  font-weight: normal
+  text-transform: uppercase
+h1
+  color: $color-headings
+h2
+  font-family: Pacifico, cursive
+  font-size: 40px
+  line-height: 46px
+  color: $color-headings
+  font-weight: normal
+
+/*  LAYOUT  */
+.homepage
+  padding: 1px 0
+  #nav
+    margin-top: 100vh
+
+header.hero
+  color: $color-text-invert
+  height: 100%
+  width: 100%
+  overflow: hidden
+  position: fixed
+
+  video
+    min-height: 100%
+    min-width: 100%
+    z-index: -1
+  .headings
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    text-align: center
+    z-index: 1
+  h1
+    color: $color-text-invert
+    text-transform: uppercase
+    font-size: 86px
+    letter-spacing: 1.7px
+    font-weight: 400
+    span
+      font-family: 'Pacifico', cursive
+      font-size: 35px
+      display: block
+      text-transform: none
+      position: relative
+      top: -50px
+
+  .social
+    position: absolute
+    top: 50px
+    right: 60px
+    color: #fff
+    font-size: 32px
+    z-index: 1
+    a:hover
+      text-decoration: none
+  .link-down
+    background: url('../img/sprite.png')
+    display: inline-block
+    width: 44px
+    height: 44px
+    border-radius: 50%
+
+
+/* NAVIGATION */
+ul, li
+  padding: 0
+  margin: 0
+
+#nav
+  background: url('../img/sep-header.png') $color-bg repeat-x bottom
+  font-size: 15px
+  line-height: 18px
+  letter-spacing: 1px
+  color: $color-link
+  text-align: center
+  padding: 16px 0
+  position: relative//necessaire pour z-index
+  z-index: 101
+  img
+    vertical-align: middle
+    height: 140px
+  ul, li
+    list-style: none
+    display: inline
+
+/* NAVIGATION 1er niveau*/
+#nav > ul > li
+  position: relative
+  width: 150px
+  padding: 0 21px
+  > a
+    padding: 5px 20px
+#nav > ul > li:hover > a
+    color: $color-link-hover
+    text-decoration: none
+
+#nav > ul > li + li::before
+  content: ''
+  background: url('../img/sprite.png') -50px 0
+  width: 2px
+  height: 14px
+  position: absolute
+  left: 0
+  top: 50%
+  transform: translateY(-50%)
+
+/* NAVIGATION 2e niveau */
+#nav ul ul
+  display: none
+
+#nav > ul > li:hover
+  padding-bottom: 100px
+  a:hover
+    color: $color-link-hover
+
+#nav ul > li:hover ul
+  display: inline-block
+  border: 1px solid $color-link
+  position: absolute
+  top: 105px
+  left: 50%
+  transform: translateX(-50%)
+  text-align: left
+  width: 250px
+  li + li
+    border-top: 1px solid $color-link
+  li
+    display: block
+    height: 60px
+    text-align: left
+    margin: 0 20px
+    a
+      display: inline
+      line-height: 60px
+
+main
+  padding-top: 100px
+  margin: 0 auto
+  background: $color-bg
+  position: relative// necessaire pour z-index
+  z-index: 100
+.welcome
+  text-align: center
+  margin: 86px auto 0
+  padding-bottom: 52px
+  color: $color-link
+  //border-bottom: 1px dotted $color-link
+  background: url('../img/sep-header.png') repeat-x left bottom
+
+  img
+  h1
+    font-size: 57px
+    letter-spacing: 1px
+    line-height: 85px
+    color: $color-link
+    text-transform: uppercase
+  p
+    font-style: italic
+    line-height: 23px
+    font-size: 19px
+
+.homepage__section
+  padding-bottom: 147px
+  @extend %clearfix
+
+.home__content:first-child
+  padding-right: 22px
+.home__content:last-child
+  padding-left: 22px
+
+.home__content
+  width: 50%
+  float: left
+  overflow: hidden
+  h2
+    margin-top: 0
+  img
+    //transform: scale(.5)
+    display: inline-block
+    vertical-align: middle
+    margin-right: 14px
+    &:hover
+      opacity: .7
+  video
+    max-width: 100%
+  .partenaire
+    a:nth-child(1) img, a:nth-child(2) img, a:nth-child(5) img
+      height: 62px
+    a:nth-child(3) img
+      height: 51px
+    a:nth-child(6) img
+      height: 32px
+
+.shop
+  background: $color-bg-shop
+  padding: 100px 0
+  z-index: 100
+  position: relative
+  img
+    //transform: scale(.5)
+    width: 133px
+    float: left
+    margin-right: 100px
+  a
+    font-size: 18px
+    line-height: 25px
+    text-transform: uppercase
+    font-family: Oswald, sans-serif
+    &:hover
+      text-decoration: underline
+
+.wrapper
+  width: 1140px
+  margin: 0 auto
+  @extend %clearfix
+
+.float_half
+  width: 50%
+  float: left
+  h2
+    color: $color-text-invert
+
+footer
+  background: #502628
+  color: $color-text-invert
+  font-size: 17px
+  z-index: 100
+  position: relative
+  input[type="email"]
+    font-family: "Times New Roman", Times, serif
+    width: 152px
+    height: 48px
+    background-color: rgba(#502628,0)
+    border-radius: 3px
+    border: 2px solid $color-text-invert
+    padding: 9px
+    font-style: italic
+    color: $color-text-invert
+    text-align: center
+    &::placeholder
+      color: $color-text-invert
+  input[type="submit"]
+    font-size: 17px
+    line-height: 20px
+    font-family: Oswald, sans-serif
+    background-color: rgba(#502628,0)
+    color: $color-text-invert
+    border: none
+  .social
+    font-size: 32px
+    width: 100% !important
+    a:hover
+      text-decoration: none
+  h3
+    font-size: 17px
+    line-height: 20px
+    letter-spacing: 1px
+    font-weight: normal
+    text-transform: uppercase
+    margin-bottom: 19px
+  .footer__social
+    padding: 80px 0
+    div
+      float: left
+      width: 33.3%
+      text-align: center
+      margin-bottom: 20px
+    div + div
+      background: url('../img/sep-footer.png') repeat-Y
+    div:first-child
+      a
+        font-style: italic
+
+.footer__map
+  background: url('../img/new-map-2x.jpg') center
+  background-size: cover
+  height: 164px
+  text-align: center
+  position: relative
+  a
+    font-size: 17px
+    font-family: 'Oswald', sans-serif
+    line-height: 32px
+    letter-spacing: .5px
+    color: $color-text-invert
+    text-transform: uppercase
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    &:hover
+      color: $color-link-hover
+      text-decoration: none
+    img
+      vertical-align: middle
+      margin-right: 20px
+
+/* BOISONS */
+.boissonspage, .contactpage
+  padding: 1px 0
+
+.boissonspage #nav, .contactpage #nav
+  position: fixed
+  width: 100%
+  background-color: rgba($color-bg,.8)
+
+.boissonspage header
+  margin-top: 172px
+  height: 375px
+  background: url('../img/cat_drink-1790x529.jpg') center
+  background-size: cover
+  position: relative
+  margin-bottom: 170px
+  &::after
+    content: ''
+    display: block
+    background: url('../img/badge-belgium.png')
+    width: 132px
+    height: 130px
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%,50%)
+
+.boissonspage h1, .contactpage h1
+  text-align: center
+  font-size: 52px
+
+.boisson
+  text-align: center
+  width: 33.33%
+  overflow: hidden
+  float: left
+  margin-bottom: 100px
+  padding: 0 15px
+  &:nth-child(3n+4)  //min-height: 500px
+    clear: left
+  figure
+    position: relative
+    width: 240px
+    height: 240px
+    margin: 0 auto 65px auto
+    &:hover::after
+      content: '\f030'
+      font-family: 'FontAwesome'
+      font-size: 45px
+      color: $color-text-invert
+      display: inline-block
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      opacity: .9
+    img
+      width: 240px
+      height: 240px
+      filter: grayscale(100%)
+      transition: all .3s ease-in-out
+      border-radius: 50%
+      &:hover
+        filter: grayscale(0)
+  h2
+    font-size: 35px
+    &::after
+      content: ''
+      display: block
+      margin: 22px 0
+      background: url('../img/sep-product.png') no-repeat
+      height: 17px
+      width: 100%
+      background-position: 50% 0
+
+  .boisson__spacer
+    transform: translateX(-25%)
+
+/* CONTACT */
+.contactpage h1, .contactpage
+  color: $color-link
+
+.contactpage
+  h1
+    margin-top: 300px
+  .contact, .mail__form
+    float: left
+  .contact
+    width: 490px
+    > div
+      //min-height: 130px
+      padding: 40px 0
+      @extend %clearfix
+    .contact__email a
+      font-style: italic
+      &:hover
+        text-decoration: underline
+    .contact__address
+      border: 2px solid $color-link
+      border-width: 2px 0
+    h3
+      margin: 0
+      width: 195px
+      display: block
+      float: left
+    > div > *:last-child
+      float: left
+    .social
+      font-size: 32px
+
+  address
+    font-style: normal
+  .mail__form
+    width: 650px
+    position: relative
+    height: 100%
+    border-left: 2px solid $color-link
+    padding-left: 100px
+    &::before
+      content: ''
+      background: url('../img/bg-stamp.png') no-repeat
+      display: block
+      width: 263px
+      height: 160px
+      position: absolute
+      right: 0
+      top: 0
+      transform: translateY(-50%)
+    input, textarea
+      padding: 11px 15px
+      width: 100%
+      height: 50px
+      font-style: italic
+      font-family: 'Times New Roman', Times, serif
+      color: $color-link
+      width: 100%
+      border: 1px solid $color-link
+      margin-bottom: 10px
+      margin-top: 5px
+    textarea
+      height: 150px
+      resize: vertical
+    label
+      font-style: italic
+      //padding-bottom: 50px
+    input[type="submit"]
+      text-transform: uppercase
+      color: $color-text-invert
+      font-family: 'Oswald', sans-serif !important
+      font-size: 20px
+      background-color: $color-link
+      font-style: normal
+  .wrapper
+    margin-bottom: 80px
+  .footer__map
+    background: none
+    .wrapper
+      background: url('../img/sep-header.png') repeat-x top
+      margin: 0 auto
+      padding: 0
+    a
+      display: block
+      position: relative
+      top: auto
+      left: auto
+      font-size: 24px
+      padding: 45px 0
+      transform: none
+      &:hover
+        color: $color-text-invert
+      img
+        display: none
+#google__map
+  width: 100%
+  // height: 600px
