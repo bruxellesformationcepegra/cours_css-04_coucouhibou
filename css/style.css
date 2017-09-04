@@ -15,6 +15,7 @@ h1, h3, .main_nav a, .homepage header strong, #submit
 {
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
+  font-weight: normal;
 }
 h2, .homepage header em
 {
@@ -40,6 +41,7 @@ h2
 }
 p{
   line-height: 1.7em;
+  font-size: 18px;
 }
 a
 {
@@ -112,10 +114,17 @@ a
 /*nav*/
 .main_nav
 {
-  margin-top: 100vh;
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   padding-top: 20px;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.homepage .main_nav
+{
+  margin-top: 100vh;
+  position: relative;
 }
 .main_nav a
 {
@@ -184,7 +193,6 @@ a
   height: 15px;
   width: 2px;
   background: url("../img/sprite.png") -50px 0 no-repeat;
-  margin: 20px 20;
   transform: translateY(50%);
 }
 li
@@ -356,6 +364,11 @@ input
   border-radius: 1px;
   padding: 17px 0;
 }
+input[name="mail"]::placeholder
+{
+  color: white;
+  opacity: 1;
+}
 [type="email"]
 {
   width: 144px;
@@ -370,7 +383,7 @@ input
   cursor: pointer;
 }
 
-.lover
+.where
 {
   height: 165px;
 }
@@ -391,14 +404,14 @@ input
 {
   color: #dc5f13;
 }
-.lover
+.where
 {
   text-align: center;
   background: url("../img/new-map-2x.jpg") no-repeat;
   background-size: cover;
   vertical-align: middle;
 }
-.lover::before
+.where::before
 {
   content: '';
   display: inline-block;
@@ -408,14 +421,271 @@ input
   margin-right: 20px;
   vertical-align: middle;
 }
-.lover *
+.where *
 {
   padding: 70px 0 60px;
   height: 32px;
 }
-.lover h3
+.where h3
 {
   margin: 0;
   display: inline-block;
   vertical-align: middle;
+}
+
+/*Boissons -----------------------------------*/
+.boissons header
+{
+  position: relative;
+  height: 373px;
+  width: 100%;
+  margin-bottom: 200px;
+  margin-top: 196px;
+
+  background: url("../img/cat_drink-1790x529.jpg");
+  background-size: cover;
+}
+.boissons header, .contact header
+{
+  margin-top: 196px;
+}
+
+.boissons .main_nav, .contact .main_nav
+{
+  top: 0;
+}
+.boissons header::after
+{
+  content: '';
+
+  position: absolute;
+  width: 132px;
+  height: 130px;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  background: url("../img/badge-belgium.png");
+}
+.boissons main{
+  text-align: center;
+}
+  .boissons h1
+  {
+    color:#DE6E1D;
+    margin-bottom: 100px;
+  }
+
+.coffee_table
+{
+  margin-bottom: 80px;
+}
+  /*.coffee_table:last-child
+  {
+    margin-bottom: 120px;
+  }*/
+  .coffee_table::after
+  {
+    content: '';
+
+    clear: both;
+    display: block;
+  }
+  .coffee_table>div
+  {
+    float:left;
+
+    width: calc((100% - 120px) / 3);
+    height: 530px;
+    margin: 40px 20px;
+  }
+    /*.coffee_table>div:last-child
+    {
+      margin-right: 0;
+    }*/
+  .coffee_table img
+  {
+    width: 240px;
+    height: 240px;
+
+    border-radius: 120px;
+    filter: grayscale(100%);
+  }
+    .coffee_table img:hover
+    {
+      filter: grayscale(0%);
+      position: relative;
+    }
+    .coffee_table figure
+    {
+      position: relative;
+      margin: 0 auto 60px;
+    }
+    .coffee_table figure:hover::after
+    {
+      content: "\f030";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      z-index: 10;
+
+      font-family:'FontAwesome';
+      font-size: 40px;
+    }
+
+  .coffee_table h2::after
+  {
+    content: '';
+
+    display: block;
+    width: 100%;
+    height: 9px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    background-image: url("../img/sep-product.png") ;
+    background-position: center;
+  }
+/*contact ----------------------------------------*/
+.contact main
+{
+  color: #502628;
+}
+.contact header
+{
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 300px;
+}
+
+.contact main::after, .contact .left section::after
+{
+  content: '';
+  clear: both;
+  display: block;
+}
+.contact .left
+{
+  float: left;
+  height: 680px;
+  margin-left: 15px;
+
+  border-right: 2px solid #502628;
+}
+  .contact .left section{
+    border-bottom: 2px solid #502628;
+    width: 482px;
+    padding: 35px 0;
+  }
+    .contact .left section:first-child
+    {
+      padding-top: 0;
+    }
+    .contact .left section:last-child
+    {
+      border: none;
+    }
+  .contact .left h3
+  {
+    float: left;
+    margin: 0;
+  }
+  .contact .left p, .contact .left a, .contact .left nav
+  {
+    display:inline;
+    float:right;
+    width: 288px;
+    margin: 0;
+
+    font-size: 18px;
+    color: #502628;
+  }
+  .contact main .left nav .fa
+  {
+    display: inline;
+    margin-right: 7px;
+    font-size: 40px;
+    width: 40px;
+    float: left;
+  }
+
+.contact .right
+{
+  position: relative;
+  float: left;
+  margin: 0;
+  margin-left: 80px;
+}
+  .contact .right h3
+  {
+    margin-top: 0;
+    margin-bottom: 50px
+  }
+  .contact .right label, .contact .right input, .contact .right textarea
+  {
+    display: block;
+    font-style: italic;
+    color: #502628;
+  }
+  .contact .right label
+  {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  .contact .right input, .contact .right textarea, .contact .right #submit
+  {
+    border: 1px solid #502628;
+    width: 540px;
+    margin-bottom: 25px;
+  }
+  .contact .right #submit
+  {
+    font-style: normal;
+  }
+  .contact .right textarea
+  {
+    height: 150px;
+    margin-bottom: 50px;
+  }
+  .contact #submit
+  {
+    color: white;
+    background-color: #502628;
+  }
+  .contact .right::before
+  {
+    content: '';
+
+    position: absolute;
+    right: 0;
+    top: -20px;
+    transform: translateY(-50%);
+    width: 263px;
+    height: 160px;
+
+    background: url("../img/bg-stamp.png")
+  }
+.contact .where
+{
+  background: #502628;
+  position: relative;
+}
+.contact .where::before
+{
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1145px;
+  transform: translateX(-50%);
+
+  background: url("../img/sep-bottom.png")repeat-x;
+}
+.contact main
+{
+  margin-bottom: 50px;
 }
