@@ -1,15 +1,23 @@
 # CSS - Exercice complet 04 - Coucou Hibou #
 
-![Block16](http://www.cepegra-labs.be/webdesign/2017/cours/css/full/05-block16/block16-git.jpg)
+![Coucou-hibou](http://cepegra-labs.be/webdesign/git/full/03-ara/img/ara-git.jpg)
 
 ## Site Original ##
 
-[Block16](http://block16omaha.com/)
+[Coucou-hibou](http://coucouhibou.net)
 
 ## Objectif ##
 
 Reproduire le plus fidèlement possible les pages :
 
 - Accueil
-- Menu
-- Location
+- Boissons
+- Contact
+
+## Certaines choses ne sont pas encore réalisables : ##
+
+- Le sticky menu sur la homepage
+
+Envie de participer à la co-construction du contenu ? Faites une pull request ! 
+
+Questions, remarques: Olivier Céréssia (o.ceressia@bruxellesformation.be)
